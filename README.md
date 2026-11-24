@@ -1,16 +1,71 @@
-# React + Vite
+# Weatherly 🌤️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive weather app. Search any city to see current conditions, with sunrise and sunset shown in that city's own local time.
 
-Currently, two official plugins are available:
+**Live demo:** [https://weatherly-git-main-sonyjoshys-projects.vercel.app/]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Current weather for any city worldwide (temperature, feels like, high/low, conditions)
+- Humidity, wind, pressure, visibility, sunrise and sunset
+- Local time for the searched city, not your device's time
+- °C / °F toggle
+- Day and night themes, saved between visits and matched to your device by default
+- Clear error messages for unknown cities, invalid API keys and offline use
+- Responsive layout and keyboard-accessible controls
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech stack
+
+React · Vite · Material UI · OpenWeather API
+
+## Getting started
+
+1. Clone the repo and install dependencies:
+
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/weatherly.git
+   cd weatherly
+   npm install
+   ```
+
+2. Get a free API key from [OpenWeather](https://openweathermap.org/api).
+
+3. Create a `.env` file in the project root:
+
+   ```
+   VITE_WEATHER_API_KEY=your_key_here
+   ```
+
+4. Start the dev server:
+
+   ```bash
+   npm run dev
+   ```
+
+New OpenWeather keys can take a couple of hours to activate.
+
+## Project structure
+
+```
+src/
+├── components/
+│   ├── Navbar.jsx
+│   ├── SearchBar.jsx
+│   ├── WeatherCard.jsx
+│   └── WeatherDetails.jsx
+├── theme.js
+├── App.jsx
+└── main.jsx
+```
+
+## Roadmap
+
+- [ ] 5-day forecast
+- [ ] Use my location
+- [ ] Weather-based backgrounds
+
+## License
+
+MIT
