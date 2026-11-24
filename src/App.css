@@ -1,0 +1,105 @@
+
+/* =================================
+   MAIN APP STYLING
+================================= */
+
+#root {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* =================================
+   DAY THEME
+================================= */
+
+.theme-day {
+  min-height: calc(100vh - 64px);
+  background: linear-gradient(
+    135deg,
+    #F4F0FF 0%,
+    #E7E0FF 48%,
+    #EAF4FF 100%
+  );
+  color: #30234D;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* =================================
+   NIGHT THEME
+
+
+================================= */
+
+.theme-night {
+  min-height: calc(100vh - 64px);
+  background: linear-gradient(
+    135deg,
+    #17152F 0%,
+    #211D42 55%,
+    #29264D 100%
+  );
+  color: #FFFFFF;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Fix white gap between navbar and content */
+.theme-day,
+.theme-night {
+  display: flow-root;
+}
+
+
+/* =================================
+   WELCOME SECTION
+================================= */
+
+.welcome-section {
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-image {
+  width: 240px;
+  max-width: 100%;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: translateY(-5px);
+}
+
+.welcome-section h3 {
+  font-weight: 700;
+  color: inherit;
+  margin-bottom: 10px;
+}
+
+.welcome-section p {
+  color: inherit;
+  opacity: 0.7;
+  font-size: 16px;
+}
+
+/* =================================
+   WELCOME SECTION ANIMATION
+================================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
